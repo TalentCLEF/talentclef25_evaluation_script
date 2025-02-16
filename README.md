@@ -10,9 +10,7 @@ The evaluation script performs the following tasks:
    Receives the following inputs via command-line arguments:
    - **qrels file:** A file in TREC format containing the relevance judgments (columns: `q_id`, `iter`, `doc_id`, `rel`).
    - **run file:** A file in TREC format containing the retrieval run (columns: `q_id`, `Q0`, `doc_id`, `rank`, `score`, and an optional `tag` column).
-   - **query_lang:** The language code for the queries (e.g., `en`, `es`).
-   - **corpuselements_lang:** The language code for the corpus elements (e.g., `en`, `es`).
-
+   - 
 2. **Loading Data:**  
    The script loads the qrels and run files into appropriate objects without applying any additional filtering.
 
