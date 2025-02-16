@@ -1,0 +1,6 @@
+q1 Q0 d1 1 1.0 run_toy1
+q1 Q0 d2 2 0.9 run_toy1
+q2 Q0 d3 1 1.0 run_toy1
+q3 Q0 d4 1 1.0 run_toy1
+q3 Q0 d5 2 0.9 run_toy1
+q3 Q0 d6 3 0.8 run_toy1
