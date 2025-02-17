@@ -7,8 +7,10 @@ def load_qrels(qrels_path):
     Loads the qrels file (TREC format: q_id, iter, doc_id, rel)
     and converts it to a Qrels object.
     """
-    qrels_df = pd.read_csv(qrels_path, sep=r"\s+", header=None,
-                             names=["q_id", "iter", "doc_id", "rel"])
+    qrels_df = pd.read_csv(qrels_path, sep="\t", header=None,
+                           names=["q_id", "iter", "doc_id", "rel"],
+                           dtype={"q_id": str, "doc_id": str})
+
     return Qrels.from_df(qrels_df, q_id_col="q_id", doc_id_col="doc_id", score_col="rel")
 
 def load_run(run_path):
