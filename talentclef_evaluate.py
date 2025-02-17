@@ -27,7 +27,9 @@ def load_run(run_path):
         run_df.columns = ["q_id", "Q0", "doc_id", "rank", "score", "tag"]
     else:
         raise ValueError("The run file does not have the expected format.")
-    
+
+    run_df["q_id"] = run_df.q_id.astype(str)
+    run_df["doc_id"] = run_df.doc_id.astype(str)
     return Run.from_df(run_df, q_id_col="q_id", doc_id_col="doc_id", score_col="score")
 
 def main():
