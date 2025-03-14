@@ -9,7 +9,7 @@ def load_qrels(qrels_path):
     """
     qrels_df = pd.read_csv(qrels_path, sep="\t", header=None,
                            names=["q_id", "iter", "doc_id", "rel"],
-                           dtype={"q_id": str, "doc_id": str})
+                           dtype={"q_id": str, "doc_id": str, "rel":int})
 
     return Qrels.from_df(qrels_df, q_id_col="q_id", doc_id_col="doc_id", score_col="rel")
 
